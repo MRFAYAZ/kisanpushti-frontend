@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "KisanPushti",
+    "slug": "KisanPushti",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "We need access to your photos to detect crop diseases",
+        "NSCameraUsageDescription": "We need camera access to capture crop leaf photos",
+        "NSPhotoLibraryAddUsageDescription": "We need to save disease reports"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow Kisan Pushti to access your photos for disease detection.",
+          "cameraPermission": "Allow Kisan Pushti to use your camera to capture crop diseases."
+        }
+      ],
+      [
+        "expo-file-system"
+      ]
+    ]
+  }
+}
